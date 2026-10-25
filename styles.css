@@ -2,9 +2,10 @@
     box-sizing: border-box; 
     margin: 0;
 }
-input, form {
+input, form, button {
     font: inherit; 
 } 
+
 
 :root {
   /* TODO: assign colors/amounts and trim. */
@@ -20,6 +21,7 @@ input, form {
   --font-weight: 700;
   --font-family: Arial, sans-serif;
 }
+
 
 body {
     color: var(--color-text);
@@ -43,7 +45,7 @@ nav ul {
     list-style: none;
     font-size: 1.5em;
 }
-nav a, footer a {
+nav a, #top-link {
   text-decoration: none;
   color: var(--color-accent);
   background-color: var(--color-main);
@@ -53,6 +55,9 @@ nav a, footer a {
   width: auto;
   display: inline-block;
   margin: 1rem;
+}
+a {
+    color: var(--color-accent);
 }
 main {
     display: grid;
@@ -65,21 +70,55 @@ main {
     padding: var(--space-card); 
     background: var(--color-surface); 
     border: 1px solid var(--color-main); 
-    border-radius: var(--radius-card); }
+    border-radius: var(--radius-card); 
+}
 .card img {
     display: block;
-    margin: auto auto 3rem auto;
+    margin: 3rem auto 3rem auto;
     border: 5px solid var(--color-accent);
-    padding: .5rem;
-    max-width: 100%;
+    border-radius: var(--radius-card);
+    max-width: 80%;
     height: auto;
+}
+p {
+    margin: var(--space-action) 0;
+    max-width: 65rem;
+}
+ul {
+    margin: 1rem;
+}
+h2 {
+    text-decoration: underline;
+}
+form { 
+    display: grid; 
+    gap: var(--space-action); 
+    max-width: 15rem; 
+    padding: 10px 15px 10px 15px;
+}
+footer {
+    grid-column: 1/3;
+    text-align: center;
 }
 footer ul {
     list-style: none;
     font-size: 1.5em;
 }
-button {
+footer button {
     background-color: var(--color-background);
     cursor:pointer;
     border: none;
 }
+
+
+.theme-alt { 
+  --color-accent: #fffdf2;
+  --color-surface: #e2ba80;
+  --color-main: #714019;
+  --space-card: 1.75rem;
+  --space-action: 2rem;
+  --radius-card: 4rem;
+  --radius-action: 4rem;
+  --font-weight: 1000;
+ }
+
