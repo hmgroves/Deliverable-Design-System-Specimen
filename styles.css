@@ -61,10 +61,10 @@ nav ul {
     list-style: none;
     font-size: 1.5em;
 }
-nav a:hover, #top-link:hover {
+nav a:hover, .top-link:hover {
     text-decoration: underline;
 }
-nav a, #top-link {
+nav a, .top-link {
   text-decoration: none;
   color: var(--color-accent);
   background-color: var(--color-main);
