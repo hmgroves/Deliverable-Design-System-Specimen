@@ -1,0 +1,85 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0;
+}
+input, form {
+    font: inherit; 
+} 
+
+:root {
+  /* TODO: assign colors/amounts and trim. */
+  --color-main: #e2ba80;
+  --color-accent: #714019;
+  --color-surface: #ffffff;
+  --color-text: #241c10;
+  --color-background: #fffdf2;
+  --space-card: 2rem;
+  --space-action: .75rem;
+  --radius-card: .5rem;
+  --radius-action: .25rem;
+  --font-weight: 700;
+  --font-family: Arial, sans-serif;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    grid-template-columns: 1fr .25fr;
+    font-family: var(--font-family);
+    margin: 1rem;
+    min-width: 50rem;
+}
+header {
+    background: var(--color-main);;
+    border-radius: var(--radius-card); 
+    padding: var(--space-card);
+}
+.eyebrow {
+    color: var(--color-accent);
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 1.5em;
+}
+nav a, footer a {
+  text-decoration: none;
+  color: var(--color-accent);
+  background-color: var(--color-main);
+  padding: 10px 15px 10px 15px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-action);
+  width: auto;
+  display: inline-block;
+  margin: 1rem;
+}
+main {
+    display: grid;
+    gap: var(--space-card);
+    max-width: 80rem; 
+    margin: 2rem auto; 
+    padding: 0 var(--space-card);
+}
+.card { 
+    padding: var(--space-card); 
+    background: var(--color-surface); 
+    border: 1px solid var(--color-main); 
+    border-radius: var(--radius-card); }
+.card img {
+    display: block;
+    margin: auto auto 3rem auto;
+    border: 5px solid var(--color-accent);
+    padding: .5rem;
+    max-width: 100%;
+    height: auto;
+}
+footer ul {
+    list-style: none;
+    font-size: 1.5em;
+}
+button {
+    background-color: var(--color-background);
+    cursor:pointer;
+    border: none;
+}
