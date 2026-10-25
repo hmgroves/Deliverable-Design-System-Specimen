@@ -5,21 +5,36 @@
 input, form, button {
     font: inherit; 
 } 
+.sniglet-regular {
+  font-family: "Sniglet", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.coiny-regular {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 :root {
   /* TODO: assign colors/amounts and trim. */
   --color-main: #e2ba80;
   --color-accent: #714019;
-  --color-surface: #ffffff;
+  --color-card: #ffffff;
   --color-text: #241c10;
   --color-background: #fffdf2;
-  --space-card: 2rem;
-  --space-action: .75rem;
-  --radius-card: .5rem;
-  --radius-action: .25rem;
-  --font-weight: 700;
-  --font-family: Arial, sans-serif;
+  --space-big: 2rem;
+  --space-med: 1rem;
+  --space-small: .5rem;
+  --width-large: 80rem;
+  --radius-big: .75rem;
+  --radius-small: .25rem;
+  --content-justify: left;
+  --grid-columns: 1/3;
+  --font-family-main: "Sniglet", Arial, sans-serif;
+  --font-family-head: "Coiny", Georgia, serif;
 }
 
 
@@ -27,17 +42,18 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     grid-template-columns: 1fr .25fr;
-    font-family: var(--font-family);
-    margin: 1rem;
-    min-width: 50rem;
+    font-family: var(--font-family-main);
 }
 header {
     background: var(--color-main);;
-    border-radius: var(--radius-card); 
-    padding: var(--space-card);
+    border-radius: var(--radius-big); 
+    padding: var(--space-big);
 }
 .eyebrow {
     color: var(--color-accent);
+}
+h1 {
+    font-family: var(--font-family-head);
 }
 nav ul {
     display: flex;
@@ -45,64 +61,72 @@ nav ul {
     list-style: none;
     font-size: 1.5em;
 }
+nav a:hover, #top-link:hover {
+    text-decoration: underline;
+}
 nav a, #top-link {
   text-decoration: none;
   color: var(--color-accent);
   background-color: var(--color-main);
-  padding: 10px 15px 10px 15px;
+  padding: var(--space-small);
   border: 1px solid var(--color-accent);
-  border-radius: var(--radius-action);
+  border-radius: var(--radius-small);
   width: auto;
+  max-width: 10rem;
+  text-align: center;
   display: inline-block;
-  margin: 1rem;
+  margin: var(--space-med);
 }
 a {
     color: var(--color-accent);
 }
+a:hover {
+    text-decoration: none;
+}
 main {
     display: grid;
-    gap: var(--space-card);
-    max-width: 80rem; 
-    margin: 2rem auto; 
-    padding: 0 var(--space-card);
+    gap: var(--space-big); 
+    margin: var(--space-big) auto; 
+    padding: 0 var(--space-big);
+    max-width: var(--width-large);
 }
 .card { 
-    padding: var(--space-card); 
-    background: var(--color-surface); 
+    display: grid;
+    grid-column: var(--grid-columns);
+    padding: var(--space-med); 
+    background: var(--color-card); 
     border: 1px solid var(--color-main); 
-    border-radius: var(--radius-card); 
+    border-radius: var(--radius-big); 
+    place-items: var(--content-justify);
 }
 .card img {
     display: block;
-    margin: 3rem auto 3rem auto;
+    margin: var(--space-big) auto;
     border: 5px solid var(--color-accent);
-    border-radius: var(--radius-card);
+    border-radius: var(--radius-small);
     max-width: 80%;
     height: auto;
 }
 p {
-    margin: var(--space-action) 0;
-    max-width: 65rem;
+    margin: var(--space-small) 0;
 }
 ul {
-    margin: 1rem;
+    margin: var(--space-med) 0;
 }
 h2 {
     text-decoration: underline;
+    font-family: var(--font-family-head);
+    margin: 0 var(--space-small);
 }
 form { 
     display: grid; 
-    gap: var(--space-action); 
+    gap: var(--space-small); 
     max-width: 15rem; 
-    padding: 10px 15px 10px 15px;
+    padding: var(--space-small) var(--space-med);
 }
 footer {
-    grid-column: 1/3;
+    grid-column: var(--grid-columns);
     text-align: center;
-}
-footer ul {
-    list-style: none;
-    font-size: 1.5em;
 }
 footer button {
     background-color: var(--color-background);
@@ -113,12 +137,14 @@ footer button {
 
 .theme-alt { 
   --color-accent: #fffdf2;
-  --color-surface: #e2ba80;
+  --color-card: #e2ba80;
   --color-main: #714019;
-  --space-card: 1.75rem;
-  --space-action: 2rem;
-  --radius-card: 4rem;
-  --radius-action: 4rem;
-  --font-weight: 1000;
+  --space-big: 1rem;
+  --space-med: .5rem;
+  --space-small: .25rem;
+  --radius-big: 12rem;
+  --radius-small: 4rem;
+  --width-large: 40rem;
+  --content-justify: center;
  }
 
