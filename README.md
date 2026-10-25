@@ -1,11 +1,13 @@
-# Deliverable Design-System Specimen
+# Deliverable Design-System Specimen Code Defense/Documentation and Tests and Evidence
 
-Documentation 
+
+Code Defense/Documentation 
 
 The intended project context and audience:
     - This website is intended to inform new or prospective ball python owners about basic care for their snake.
 The reset strategy and at least two reset decisions:
     - I used box-sizing: border-box so elements could be more easily sized
+    - all margins set to 0 to have more control on element spacing
     - I had the font inherit for input, form, and button so that the font matches the main font instead of using the default browsers'.
 The purpose of the major token groups and the naming approach:
     - I made tokens for color groups, spacing groups, radius groups, and grid because they're all used multiple times. I also made a token for content justify so I can use it to change the theme. I kept all the token the names simple and easy to understand to make it easier to remember which was which.
@@ -30,40 +32,40 @@ Required Tests and Evidence
     - Observed result: Cards didn't shrink past around 350px and overflowed off the screen edge.
     - Revision: Adjusted the card padding and margins to be smaller
     - Observed result after revision: All elements shrunk and fit properly 
+    - Evidence: evidence1.png in assets folder
 768px test:
     - Expected result: for all elements to dynamically shrink to fit the smaller viewport
     - Observed result: All elements shrunk and fit properly.
     - Revision: none
+    - Evidence: evidence2.png in assets folder
 1280px test:
     - Expected result: for all elements to dynamically adjust to fit this viewport
     - Observed result: All elements fit properly.
     - Revision: none
+    - Evidence: evidence3.png in assets folder
 200% browser zoom test: 
     - Expected result: for the text size and images to get bigger, but all elements still fit properly without overflow
     - Observed result: All elements fit properly.
     - Revision: none
+    - Evidence: evidence4.png in assets folder
 Keyboard navigation test:
     - Expected result: for all interactive elements, such as links and forms, to highlight and interact properly
     - Observed result: All elements interact properly.
     - Revision: none
+    - Evidence: evidence5.png in assets folder
 Contrast test:
     - Expected result: All elements, in both the standard and alternate themes, are distinct from one another and visually convey their purpose. This includes interactive elements appearing 'clickable' and alt text displaying correctly.
     - Observed result: All interactive elements have visual indicators and alt text correctly displays
     - Revision: none
+    - Evidence: evidence6.png in assets folder
 Font fallback test:
     - Expected result: After disabling the main fonts, the fallback fonts will be used
     - Observed result: After disabling the main fonts, the fallback fonts were used
     - Revision: none
+    - Evidence: evidence7.png in assets folder
 Validation:
     - HTML: on first submission there were 3 duplicate ID errors. After fixing this there were no more remaining errors.
     - CSS: No errors were found.
+    - Evidence: evidence8.png and evidence9.png in assets folder
 Publication:
-    - 
-
-Responsive: Test at 320, 768, and 1280 CSS-pixel viewport widths.
-Zoom: Test the page at 200% browser zoom.
-Keyboard: Navigate through every link, button, and control without using a mouse.
-Contrast: Check essential text, actions, focus indicators, and controls in both themes.
-Font fallback: Block, rename, or temporarily remove the preferred font and record what changes.
-Validation: Validate the final HTML and CSS and resolve errors caused by your code.
-Publication: Open the published URL in a private or signed-out browser window and verify that styles, fonts, media, links, and controls load correctly.
+    - https://hmgroves.github.io/Deliverable-Design-System-Specimen/ 

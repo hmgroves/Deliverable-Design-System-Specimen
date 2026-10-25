@@ -1,3 +1,8 @@
+/*  Compact reset below. 
+    - I used box-sizing: border-box so elements could be more easily sized
+    - all margins set to 0 to have more control on element spacing
+    - I had the font inherit for input, form, and button so that the font matches the main font instead of using the default browsers'. */
+    
 *, *::before, *::after { 
     box-sizing: border-box; 
     margin: 0;
@@ -5,6 +10,7 @@
 input, form, button {
     font: inherit; 
 } 
+
 .sniglet-regular {
   font-family: "Sniglet", system-ui;
   font-weight: 400;
